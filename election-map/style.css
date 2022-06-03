@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#d9e2e3;
+}
+
+.title-container {
+    max-width: 760px;
+    margin: 0px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom:20px;
+}
+
+
+.text-container {
+    max-width: 760px;
+    margin: 0px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tail {
+    max-width: 760px;
+    margin: 0px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.tail p{
+    margin-top: 16px;
+    font-size: large;
+    font-family: 'Fira Sans', sans-seri;
+    font-weight: 400;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.tag {
+    font-family: 'Mako', sans-serif;
+    font-weight: 300;
+    color:#4c536b;
+    line-height: 14px;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: 'Fira Sans', sans-seri;
+    color:#063554;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.byline {
+    font-family: 'Mako', sans-serif;
+    color:#747474;
+    line-height: 14px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.date {
+    font-family: 'Mako', sans-serif;
+    color:#747474;
+    line-height: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.text-container p {
+    margin-top: 20px;
+    font-size: large;
+    font-family: 'Marcellus', serif;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+a:link, a:visited {
+    color: #063554;
+    text-decoration: underline;
+    cursor: auto;
+  }
+  
+  a:link:active, a:visited:active {
+    color: #11669e;
+  }
+
+
+
+#map-choropleth {
+    width: 80%;
+    height: 600px;
+    margin: 5em auto;
+}
+.mapboxgl-popup-content h4 {
+    font-weight: 300;
+    font-size: 0.9em;
+    border-width: 0px 0px 0.5px 0px;
+    border-style: solid;
+    border-color: rgb(80, 80, 80);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.mapboxgl-popup-content h2 {
+    font-weight: 500;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+}
+.mapboxgl-popup-content p {
+    font-weight: 300;
+    margin-top: 0.3em;
+    margin-bottom: 0em;
+}
+
+
+#map-point {
+    width: 80%;
+    height: 600px;
+    margin: 5em auto;
+}
