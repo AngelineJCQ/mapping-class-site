@@ -1,3 +1,6 @@
 
 election-map/.DS_Store
 election-map/data/.DS_Store
+.DS_Store
+county-disaster-map/data/.ipynb_checkpoints/Map1 - CleanCountyTypologyData-checkpoint.ipynb
+county-disaster-map/data/.ipynb_checkpoints/Map2 - CleanDisasterData-checkpoint.ipynb

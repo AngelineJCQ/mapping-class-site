@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <title>Election Map 2020</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Mako&family=Marcellus&family=Open+Sans:wght@500&family=Source+Sans+Pro:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class='title-container'>
+        <p class="tag">US COUNTY TYPE, CHINA DISASTER</p>
+        <h1>Mapping the US County Typology Codes and China Disasters</h1>
+        <p class="byline">By Chuqin Jiang</p>
+        <p class="date">June 3, 2022</p>
+    </div>
+    <div class='text-container'>
+        <p>This is a choropleth map showing the economic dependence types of each county in US. The types include farming, mining, manufacturing, federal/State government, recreation, and nonspecialized. If you click each county, you can see their policy-relevant types. The opacity is associated with the number of issues: the more issues it has, the more opaque the color is.</p>
+    </div>
+    <div id='map-choropleth'>
+    <div id='title' class="title">
+        <div id="county-legend" class="legend">
+            <h4>Economic Dependence Types</h4>
+            <div><span style="background-color: #D1D0A3"></span>Farming</div>
+            <div><span style="background-color: #4A6C6F"></span>Maufacturing</div>
+            <div><span style="background-color: #B9D6F2"></span>Federal/State Government</div>
+            <div><span style="background-color: #FCD0A1"></span>Recreation</div>
+            <div><span style="background-color: #201E50"></span>Mining</div>
+            <div><span style="background-color: #bababa"></span>Nonspecialized</div>
+        </div>
+    </div>   
+    </div> 
+    <script type='text/javascript' src="map-choropleth.js"></script>
+
+    <div class='text-container'>
+        <p>This is a point map, containing all the natural disasters in China from 1966 to 2018. The larger the circle is, the more disaster happened in that province. The color shows the dominant type of disaster taking place in this given province. If you click each circle, you can see the disaster types in detail. If you zoom in, you can see the exact location of each disaster and its year.</p>
+    </div>
+    <div id="map-point">
+        <div id='title' class="title">
+            <div id="disaster-legend" class="legend">
+                
+                <h4>Main Disaster Type</h4>
+                <div><span style="background-color: #F0EFEB"></span>Flood</div>
+                <div><span style="background-color: #b5c6e0"></span>Storm</div>
+                <div><span style="background-color: #ffa585"></span>Extreme Temperature</div>
+                <div><span style="background-color: #B08569"></span>Landslide</div>
+                <div><span style="background-color: #ddb892"></span>Drought</div>
+                <div><span style="background-color: #9c6644"></span>Mass Movement (Dry)</div>
+                <div><span style="background-color: #808080"></span>Earthquake</div>
+            
+            </div>
+        </div>
+        <script type='text/javascript' src="map-point.js"></script>
+    </div>
+    <div class="tail">
+        <p>If you are interested in my data analysis process, you can find the notebook <a href="https://github.com/AngelineJCQ/mapping-class-data">here</a>.</p>
+        <p>The description of County Typology Codes data can be found <a href="https://www.ers.usda.gov/data-products/county-typology-codes.aspx">here</a> and Geocoded Disaster Data is from <a href="https://sedac.ciesin.columbia.edu/data/set/pend-gdis-1960-2018/data-download">here</a>.</p>
+        <p>The legend code is from this <a href="https://pointsunknown.nyc/web%20mapping/mapbox/2020/03/25/10_WebmappingTurnstileData.html">tutorial</a>.</p>
+    </div>
+</body>
+</html>
