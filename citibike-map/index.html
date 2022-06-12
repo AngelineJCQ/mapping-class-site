@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <title>September 2020/2021 Citibike Mapping</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Mako&family=Marcellus&family=Open+Sans:wght@500&family=Source+Sans+Pro:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class='title-container'>
+        <p class="tag">NYC, CITIBIKE DATA</p>
+        <h1>Mapping the NYC Citibike Data in September 2020 and 2021</h1>
+        <p class="byline">By Chuqin Jiang</p>
+        <p class="date">June 12, 2022</p>
+    </div>
+    <div class='text-container'>
+        <p>This is a point map showing the start/end station of citibike in New York City in September 2020 and 2021. The size of each circle represents the number of trips starting/ending in that particular station. If you click each point, you can see the station name and the number of trips.</p>
+    </div>
+    <div class="row-container">
+        <div class="column-container">
+            <h4 class="map-title">Citibike start station in September 2020</h4>
+            <div class="map-point" id="map-point-1">
+                <script type='text/javascript' src="map-point-1.js"></script>
+            </div>
+        </div>
+        <div class="column-container">
+            <h4 class="map-title">Citibike end station in September 2020</h4>
+            <div class="map-point" id="map-point-2">
+                <script type='text/javascript' src="map-point-2.js"></script>
+            </div>
+        </div>
+    </div>
+    <div class="row-container">
+        <div class="column-container">
+            <h4 class="map-title">Citibike start station in September 2021</h4>
+            <div class="map-point" id="map-point-3">
+                <script type='text/javascript' src="map-point-3.js"></script>
+            </div>
+        </div>
+        <div class="column-container">
+            <h4 class="map-title">Citibike end station in September 2021</h4>
+            <div class="map-point" id="map-point-4">
+
+                <script type='text/javascript' src="map-point-4.js"></script>
+            </div>
+        </div>
+    </div>
+    <div class="tail">
+        <p>If you are interested in my data analysis process, you can find the notebook <a href="https://colab.research.google.com/drive/1-VH-hvFSs6J6og-zgnDNhe2H265OZEdH?usp=sharing">here</a>.</p>
+        <p>The original dataset can be found <a href="https://ride.citibikenyc.com/system-data">here</a>.</p>
+        <p>The legend code is from this <a href="https://pointsunknown.nyc/web%20mapping/mapbox/2020/03/25/10_WebmappingTurnstileData.html">tutorial</a>.</p>
+    </div>
+    
+</body>
+</html>
