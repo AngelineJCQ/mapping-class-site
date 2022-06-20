@@ -2,10 +2,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nZWxpbmVqY3EiLCJhIjoiY2wzdTh0MzNyMjlzNzNwb
 var map_point = new mapboxgl.Map({
     container: 'map-point',
     style: 'mapbox://styles/angelinejcq/cl4mtcmx3004v15ny114xztix',
-    zoom:  2.5,
+    zoom:  2.6,
     minZoom: 2,
     maxZoom: 6,
-    center: [115, 30],
+    center:[125, 22],
+    projection: {
+      name: 'lambertConformalConic',
+      center: [120, 2],
+      parallels: [24, 10.5]
+      }
 });
 
 map_point.on("load", function () {
