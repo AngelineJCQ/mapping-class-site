@@ -21,7 +21,7 @@ map_point.on("load", function () {
           "circle-radius":
           ["interpolate", ["exponential", 3], ["zoom"],
           2, 5,
-          6,10,
+          6,15,
           ],
           "circle-color": [
           "step",
