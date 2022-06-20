@@ -105,7 +105,7 @@ a:link, a:visited {
 }
 
 .map-point {
-    width: 90%;
+    width: 600px;
     height: 600px;
     margin: 3em auto;
 }
@@ -170,12 +170,14 @@ a:link, a:visited {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     gap: 0;
     margin-top: 100px;
  }
 
 .column-container {
+    width: 300px;
     display: flex;
     flex-direction: column;
     flex-basis: 100%;

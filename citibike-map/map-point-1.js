@@ -5,7 +5,7 @@ var map_point = new mapboxgl.Map({
     zoom: 10.5,
     maxZoom: 15,
     minZoom: 9,
-    center: [-73.800, 40.75]
+    center: [-73.9800, 40.75]
 });
 
 map_point.on("load", function () {
@@ -18,7 +18,15 @@ map_point.on("load", function () {
           data: "data/citiGeoStart2020.geojson",
       },
       paint: {
-          "circle-radius":5,
+          "circle-radius":
+          ["interpolate", ["exponential", 3], ["zoom"],
+          10, ["interpolate", ["linear"], ["get", "tripCount_2020"],
+          0, 2,
+          14000, 15],
+          15, ["interpolate", ["linear"], ["get", "tripCount_2020"],
+          0, 20,
+          14000, 80]
+          ],
           "circle-color": "#fdfcdc",
           "circle-stroke-width": 0.8,
           "circle-stroke-color": "#2d031d",
