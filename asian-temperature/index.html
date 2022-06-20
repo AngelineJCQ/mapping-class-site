@@ -15,13 +15,16 @@
 <body>
         <div class='title-container'>
             <p class="tag">CLIMATE, ASIAN</p>
-            <h1>Mapping the temperature change of Monsoon Asia Area from 1975 to 2015</h1>
+            <h1>Weather vs Climate: a summer day’s temperature can be cooler in some places, but the trend tells global warming</h1>
             <p class="byline">By Chuqin Jiang</p>
             <p class="date">June 20, 2022</p>
         </div>
 
         <div class='text-container'>
-            <p>This is a point map, containing all the natural disasters in China from 1966 to 2018. The larger the circle is, the more disaster happened in that province. The color shows the dominant type of disaster taking place in this given province. If you click each circle, you can see the disaster types in detail. If you zoom in, you can see the exact location of each disaster and its year.</p>
+            <p>I heard lots of people in China complaining about the more extreme heat in the summer. Even my grandpa, who got used to working in outdoor construction site when he was young, and criticized me for turning AC on too early in the year, can’t stand the rising temperature any more. But is it due to the actual warming? Or just the decreasing tolerance of modern people?</p>
+            <p>Guided by this question, I tried to search the global temperature data. Most of them are stored in NetCDF file, which I never encountered before. Finding it hard to convert directly to csv because it’s extremely large, and also hard to extract a subset from the file, I decided to start from a single region, Asia. And luckily, I found The APHRODITE project, which has the high-resolution, daily climate data stored each year. Even though, I still spent several hours trying to understand the structure of the data, and generate 280 longitude * 360 latitude = 100,800 locations.</p>
+            <p>Then I faced the ultimate question of mapping: how to show the time change? I made a simple desicion, to choose the same day’s data across multiple years (for example, June 1st in 1975 and 2015), and calculate the difference of temperature between two days. Because firstly, it’s meaningless to compare the winter and summer temperatures; and secondly, climate change happens in a long term, which can’t be seen in one year or even five years.</p>
+            <p>And the map is shown below. At first, I was so proud of my work, which seems like an abstract art work. But when I tried to draw some conclusions from it, I found it was an awful decision. Extracting a random day from two years can’t tell anything, neither prove or disprove the global or regional warming. Some locations witnessed extreme higher temperatures, which includes my hometown, Ningbo; but also, the Himalayas area and northern part of China saw a decrease, with drops greater than 10 Celsius in some locations. Okay, can I say the weather is getting more extreme? Something like… the hot place is getting hotter?</p>
         </div>
         <div id="map-point">
             <div id='title' class="title">
@@ -40,8 +43,11 @@
         </div>
 
         <div class='text-container'>
-            <p>This is a point map, containing all the natural disasters in China from 1966 to 2018. The larger the circle is, the more disaster happened in that province. The color shows the dominant type of disaster taking place in this given province. If you click each circle, you can see the disaster types in detail. If you zoom in, you can see the exact location of each disaster and its year.</p>
+            <p>Then I did some research. I found I couldn’t say that either. From the larger trend, the Himalayas area is also affected by global warming, instead of cooling down itself. So basically, it is a cool map but showing nothing.</p>
             <img src="img/ASIA-1901-2021.png">
+            <p>The main takeaway from this trial is that: 1) don’t use sliced data to show climate change; 2) I learnt how to deal with NetCDF data.</p>
+            <p>Btw, the climate strip visualization website is so cool. It can actually show the average temperature in Asia is getting higher, which can’t be shown from my map.</p>
+            <p>And Happy <b>Show Your Stripes Day</b>! It’s June 21!</p>
         </div>
 
 

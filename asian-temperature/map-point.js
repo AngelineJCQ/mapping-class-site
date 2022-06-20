@@ -42,9 +42,9 @@ map_point.on("load", function () {
   
 // Create the popup
 map_point.on('click', 'temp_change', function (e) {
-  var temp_1975	 = e.features[0].properties.temp_1975;
-  var temp_2015	 = e.features[0].properties.temp_2015;
-  var diff = e.features[0].properties.diff;
+  var temp_1975	 = e.features[0].properties.temp_1975.toFixed(2);
+  var temp_2015	 = e.features[0].properties.temp_2015.toFixed(2);
+  var diff = e.features[0].properties.diff.toFixed(2);
 
   new mapboxgl.Popup()
       .setLngLat(e.lngLat)
