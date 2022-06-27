@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <title>US Wildfire Hazard Potential</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Mako&family=Marcellus&family=Open+Sans:wght@500&family=Source+Sans+Pro:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class='title-container'>
+        <p class="tag">MAP, WILDFIRE</p>
+        <h1>Nevada Has the Highest Risk of Uncontrollable Wildfire; Fuel Treatments May Be Needed</h1>
+        <p class="byline">By Chuqin Jiang</p>
+        <p class="date">June 27, 2022</p>
+    </div>
+    <div class='text-container'>
+        <p>Nevada has the highest average Wildfire Hazard Potential (WHP), which means the wildfire here may be difficult to control. Thus, methods like fuel treatments should be prioritized in Nevada, and the states around, as being shown on the map.</p>
+        <p>Areas with higher WHP values represent fuels with a higher probability of experiencing torching, crowning, and other forms of extreme fire behavior under conducive weather conditions, according to the U.S. Forest Service's (USFS). On its own, WHP map is not an explicit map of wildfire threat or risk. It is intended for long-term strategic planning and fuels management.</p>
+        <p>Management includes fuel treatment practices, which is burning, thinning, pruning, chipping, and mechanically removing fuels to reduce the amount and continuity of burnable vegetation. Fuel treatments are most effective when multiple strategies are combined to disrupt the potential for a wildfire to spread and intensify, according to Wildfire Risk to Communities project.</p>
+        <p>If you zoom in, county level data can also be seen. If you click on each county, you can see the absolute WHP and the percentile of that county within its own state.</p>
+    </div>
+    <div id='map-choropleth'>
+        <div id="state-legend" class="legend">
+            <h4>Wildfire Hazard Potential(WHP)</h4>
+            <div><span style="background-color: #691e06"></span>870 - 1893</div>
+            <div><span style="background-color: #8f250c"></span>568 - 870</div>
+            <div><span style="background-color: #bb4d00"></span>331 - 568</div>
+            <div><span style="background-color: #ca5310"></span>181 - 331</div>
+            <div><span style="background-color: #fbba72"></span>75 - 181</div>
+            <div><span style="background-color: #ffd29d"></span>3 - 75</div>
+            </div>
+             
+            <div id="county-legend" class="legend" style="display: none">
+            <h4>Wildfire Hazard Potential(WHP)</h4>
+            <div><span style="background-color: #691e06"></span>3809 - 7167</div>
+            <div><span style="background-color: #8f250c"></span>2242 - 3809</div>
+            <div><span style="background-color: #bb4d00"></span>1433 - 2242</div>
+            <div><span style="background-color: #e85d04"></span>902 - 1433</div>
+            <div><span style="background-color: #f48c06"></span>539 - 902</div>
+            <div><span style="background-color: #faa307"></span>320 - 539</div>
+            <div><span style="background-color: #ffba08"></span>171 - 320</div>
+            <div><span style="background-color: #fbba72"></span>63 - 171</div>
+            <div><span style="background-color: #ffd29d"></span>0 - 63</div>
+
+            </div>
+        <script type='text/javascript' src="map-choropleth.js"></script>
+    </div>
+
+    <div class="tail">
+        <p>If you are interested in my data analysis process, you can find the notebook <a href="https://github.com/AngelineJCQ/mapping-class-data/tree/main/05-WildfireData">here</a>.</p>
+        <p>The wildfire data and its description can be downloaded <a href="https://www.fs.usda.gov/rds/archive/Catalog/RDS-2020-0016">here</a>.</p>
+        <p>Updating legend by zoom level follows the tutorial from <a href="https://docs.mapbox.com/mapbox-gl-js/example/updating-choropleth/">Mapbox</a>.</p>
+    </div>
+</body>
+</html>
